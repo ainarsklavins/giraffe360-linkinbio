@@ -1,26 +1,110 @@
 @import "tailwindcss";
 
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  /* Giraffe360 Design Tokens */
+  --g360-dark: #1C1C28;
+  --g360-darker: #13131A;
+  --g360-accent: #F5C518;
+  --g360-accent-hover: #E5B616;
+  --g360-white: #FFFFFF;
+  --g360-gray: #9CA3AF;
+  --g360-gray-light: #D1D5DB;
+  --g360-card: #252532;
+  --g360-card-hover: #2D2D3D;
 }
 
 @theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+  --color-g360-dark: var(--g360-dark);
+  --color-g360-darker: var(--g360-darker);
+  --color-g360-accent: var(--g360-accent);
+  --color-g360-accent-hover: var(--g360-accent-hover);
+  --color-g360-white: var(--g360-white);
+  --color-g360-gray: var(--g360-gray);
+  --color-g360-gray-light: var(--g360-gray-light);
+  --color-g360-card: var(--g360-card);
+  --color-g360-card-hover: var(--g360-card-hover);
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+* {
+  box-sizing: border-box;
 }
 
 body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  background: var(--g360-darker);
+  color: var(--g360-white);
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  margin: 0;
+  padding: 0;
+  min-height: 100vh;
+}
+
+/* Smooth scrolling */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Custom scrollbar for dark theme */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--g360-darker);
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--g360-card);
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--g360-gray);
+}
+
+/* Utility classes for Giraffe360 theme */
+.g360-gradient {
+  background: linear-gradient(180deg, var(--g360-dark) 0%, var(--g360-darker) 100%);
+}
+
+.g360-card {
+  background: var(--g360-card);
+  border-radius: 12px;
+  transition: all 0.2s ease-in-out;
+}
+
+.g360-card:hover {
+  background: var(--g360-card-hover);
+  transform: translateY(-2px);
+}
+
+.g360-button-primary {
+  background: var(--g360-accent);
+  color: var(--g360-darker);
+  font-weight: 600;
+  border-radius: 8px;
+  padding: 12px 24px;
+  transition: all 0.2s ease-in-out;
+  border: none;
+  cursor: pointer;
+}
+
+.g360-button-primary:hover {
+  background: var(--g360-accent-hover);
+  transform: translateY(-1px);
+}
+
+.g360-button-secondary {
+  background: transparent;
+  color: var(--g360-white);
+  font-weight: 500;
+  border-radius: 8px;
+  padding: 12px 24px;
+  transition: all 0.2s ease-in-out;
+  border: 1px solid var(--g360-gray);
+  cursor: pointer;
+}
+
+.g360-button-secondary:hover {
+  border-color: var(--g360-accent);
+  color: var(--g360-accent);
 }
