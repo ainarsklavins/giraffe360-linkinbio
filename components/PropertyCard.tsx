@@ -9,10 +9,10 @@ interface PropertyCardProps {
 }
 
 const statusColors = {
-  "For Sale": "bg-green-500/20 text-green-400",
-  "Open House": "bg-[var(--g360-accent)]/20 text-[var(--g360-accent)]",
-  "Coming Soon": "bg-blue-500/20 text-blue-400",
-  "Under Contract": "bg-purple-500/20 text-purple-400",
+  "For Sale": "bg-green-500 text-white",
+  "Open House": "bg-[var(--g360-accent)] text-[var(--g360-darker)]",
+  "Coming Soon": "bg-blue-500 text-white",
+  "Under Contract": "bg-purple-500 text-white",
 };
 
 export default function PropertyCard({ property }: PropertyCardProps) {
