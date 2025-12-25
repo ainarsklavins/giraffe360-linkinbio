@@ -9,11 +9,11 @@ const inter = Inter({
 });
 
 export const metadata: Metadata = {
-  title: "Sarah Johnson | Real Estate Agent",
-  description: "Licensed Real Estate Agent specializing in luxury properties in Miami. View my current listings and connect with me.",
+  title: "Giraffe360 Link-in-Bio Prototypes",
+  description: "Prototype showcase for real estate agent link-in-bio pages. Explore different design variations.",
   openGraph: {
-    title: "Sarah Johnson | Real Estate Agent",
-    description: "Licensed Real Estate Agent specializing in luxury properties in Miami.",
+    title: "Giraffe360 Link-in-Bio Prototypes",
+    description: "Prototype showcase for real estate agent link-in-bio pages.",
     type: "website",
   },
 };
