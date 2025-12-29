@@ -3,6 +3,7 @@ import VideoIntro from "./components/VideoIntro";
 import AboutSection from "./components/AboutSection";
 import PropertyList from "./components/PropertyList";
 import ContactCTA from "./components/ContactCTA";
+import PeekPropertiesButton from "./components/PeekPropertiesButton";
 import { agent, properties } from "@/data/mock-data";
 
 export default function Prototype2() {
@@ -22,6 +23,11 @@ export default function Prototype2() {
 
         {/* Video Introduction - Compact */}
         <VideoIntro videoUrl={agent.videoUrl} name={agent.name} />
+
+        {/* Peek into Properties - Video-First Experience */}
+        <div className="px-4 mb-4">
+          <PeekPropertiesButton />
+        </div>
 
         {/* About Section - Compact */}
         <AboutSection bio={agent.bio} specializations={agent.specializations} />
