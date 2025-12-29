@@ -10,8 +10,8 @@ const prototypes = [
   },
   {
     id: "prototype-2",
-    name: "Prototype 2",
-    description: "Duplicate of Classic - ready for independent modifications",
+    name: "Peeks Experience",
+    description: "Video-first property browsing with TikTok-style vertical scroll",
     href: "/prototype-2",
   },
 ];
