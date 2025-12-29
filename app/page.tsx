@@ -29,27 +29,27 @@ const prototypes = [
 export default function Home() {
   return (
     <main className="min-h-screen g360-gradient">
-      <div className="max-w-2xl mx-auto px-4 py-12">
+      <div className="max-w-3xl mx-auto px-4 py-6">
         {/* Header */}
-        <div className="text-center mb-12">
-          <h1 className="text-3xl font-bold text-white mb-2">
+        <div className="text-center mb-6">
+          <h1 className="text-2xl font-bold text-white mb-1">
             Giraffe360 Link-in-Bio
           </h1>
-          <p className="text-[var(--g360-gray)]">
+          <p className="text-[var(--g360-gray)] text-sm">
             Prototype showcase for real estate agents
           </p>
         </div>
 
         {/* Prototype Cards */}
-        <div className="grid gap-4 sm:grid-cols-2">
+        <div className="grid gap-3 grid-cols-3">
           {prototypes.map((prototype) => (
             <Link
               key={prototype.id}
               href={prototype.href}
-              className="group block p-6 rounded-2xl bg-[var(--g360-card)] hover:bg-[var(--g360-card-hover)] transition-all border border-transparent hover:border-[var(--g360-accent)]/30"
+              className="group block p-3 rounded-xl bg-[var(--g360-card)] hover:bg-[var(--g360-card-hover)] transition-all border border-transparent hover:border-[var(--g360-accent)]/30"
             >
               {/* Preview image */}
-              <div className="aspect-[9/16] mb-4 rounded-xl bg-[var(--g360-dark)] overflow-hidden relative">
+              <div className="aspect-[9/14] mb-2 rounded-lg bg-[var(--g360-dark)] overflow-hidden relative">
                 <Image
                   src={prototype.preview}
                   alt={`${prototype.name} preview`}
@@ -59,24 +59,18 @@ export default function Home() {
               </div>
 
               {/* Info */}
-              <h2 className="text-lg font-semibold text-white mb-1 group-hover:text-[var(--g360-accent)] transition-colors">
+              <h2 className="text-sm font-semibold text-white mb-0.5 group-hover:text-[var(--g360-accent)] transition-colors">
                 {prototype.name}
               </h2>
-              <p className="text-[var(--g360-gray)] text-sm mb-4">
+              <p className="text-[var(--g360-gray)] text-xs line-clamp-2">
                 {prototype.description}
               </p>
-
-              {/* CTA */}
-              <span className="inline-flex items-center gap-2 text-[var(--g360-accent)] text-sm font-medium">
-                View Prototype
-                <ArrowRight size={16} className="group-hover:translate-x-1 transition-transform" />
-              </span>
             </Link>
           ))}
         </div>
 
         {/* Footer */}
-        <div className="mt-12 text-center">
+        <div className="mt-6 text-center">
           <p className="text-[var(--g360-gray)] text-xs">
             Powered by{" "}
             <a
