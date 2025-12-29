@@ -14,6 +14,12 @@ const prototypes = [
     description: "Video-first property browsing with TikTok-style vertical scroll",
     href: "/prototype-2",
   },
+  {
+    id: "prototype-3",
+    name: "Full Peeks Focus",
+    description: "Peeks-first with prominent button, hidden extras behind toggle",
+    href: "/prototype-3",
+  },
 ];
 
 export default function Home() {
