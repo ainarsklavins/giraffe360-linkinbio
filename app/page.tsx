@@ -1,4 +1,5 @@
 import Link from "next/link";
+import Image from "next/image";
 import { ArrowRight } from "lucide-react";
 
 const prototypes = [
@@ -7,18 +8,21 @@ const prototypes = [
     name: "Classic",
     description: "Compact header with inline social icons, expandable video introduction",
     href: "/classic",
+    preview: "/previews/classic.png",
   },
   {
     id: "prototype-2",
     name: "Peeks Experience",
     description: "Video-first property browsing with TikTok-style vertical scroll",
     href: "/prototype-2",
+    preview: "/previews/prototype-2.png",
   },
   {
     id: "prototype-3",
     name: "Full Peeks Focus",
     description: "Peeks-first with prominent button, hidden extras behind toggle",
     href: "/prototype-3",
+    preview: "/previews/prototype-3.png",
   },
 ];
 
@@ -44,11 +48,14 @@ export default function Home() {
               href={prototype.href}
               className="group block p-6 rounded-2xl bg-[var(--g360-card)] hover:bg-[var(--g360-card-hover)] transition-all border border-transparent hover:border-[var(--g360-accent)]/30"
             >
-              {/* Preview placeholder */}
-              <div className="aspect-[9/16] mb-4 rounded-xl bg-[var(--g360-dark)] flex items-center justify-center overflow-hidden">
-                <div className="text-[var(--g360-gray)] text-sm">
-                  Preview
-                </div>
+              {/* Preview image */}
+              <div className="aspect-[9/16] mb-4 rounded-xl bg-[var(--g360-dark)] overflow-hidden relative">
+                <Image
+                  src={prototype.preview}
+                  alt={`${prototype.name} preview`}
+                  fill
+                  className="object-cover object-top"
+                />
               </div>
 
               {/* Info */}
